@@ -20,10 +20,16 @@ class Principal extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['css'] = 'assets/theme/vendor/metisMenu/metisMenu.min.css';
+		//$this->load->view('login/login_view');	
+
+		$data['css'][0] = 'assets/theme/vendor/metisMenu/metisMenu.min.css';
+		$data['js'][0] = 'assets/theme/dist/js/sb-admin-2.js';
 		$data['page_title'] = 'Hola';	
 		$this->load->Library('menu');
 		$this->menu->load_view("dashboard/dashboard_view",$data);
-		//$this->Menu->load_view('dashboard/dashboard_view',$data);		
+
+		////$this->Menu->load_view('dashboard/dashboard_view',$data);		
 	}
+
+	
 }
